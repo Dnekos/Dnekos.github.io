@@ -158,7 +158,11 @@ header a {
 
 /* Add a red background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+  background-color: #ddd;
+}
+
+.navbtn li:hover{
+  background-color: #ddd;
 }
 
 /* Dropdown content (hidden by default) */
@@ -179,6 +183,7 @@ header a {
   text-decoration: none;
   display: block;
   text-align: left;
+  background-color: #eee;
 }
 
 /* Add a grey background color to dropdown links on hover */
