@@ -53,7 +53,7 @@ header li {
 }
 
 section {
-    height: 100vh;
+    height: minmax(100vh, auto);
     border: 1px solid black;
     display: flex;
     justify-content: center;
@@ -202,8 +202,8 @@ header a {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 80px);
-  grid-template-rows: repeat(3, 80px);
+  grid-template-columns: repeat(3, 300px);
+  grid-auto-rows: 200px;
   grid-gap: 5px;
 }
 
