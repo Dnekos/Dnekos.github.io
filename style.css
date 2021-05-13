@@ -100,3 +100,8 @@ header a {
   align-items: center;
   justify-content: center;
 }
+
+.social-links li {
+  display: inline-block;
+  margin-right: 8px;
+}
