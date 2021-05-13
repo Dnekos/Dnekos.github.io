@@ -104,6 +104,10 @@ header a {
   justify-content: center;
 }
 
+.gamelinks {
+	list-style: none;
+}
+
 .social-links {
   list-style: none;
   padding-left: 0px;
