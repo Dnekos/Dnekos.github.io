@@ -12,9 +12,12 @@ html, body {
 
 .gamepage {
   display: flex;
-  background: linear-gradient(to bottom, rgba(231, 240, 245, 1) 0%, rgba(170, 221, 235, 1) 100%);
+}
+.gamepage, section{
+	background: linear-gradient(to bottom, rgba(231, 240, 245, 1) 0%, rgba(170, 221, 235, 1) 100%);
 
 }
+
 
 .wrapper {
 	align-items: center;
