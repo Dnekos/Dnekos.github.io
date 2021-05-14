@@ -9,10 +9,10 @@ html, body {
   
   font-family: 'Open Sans', sans-serif;
 }
-
+/* dont think it works right
 .gamepage {
   display: flex;
-}
+}*/
 .gamepage, section{
 	background: linear-gradient(to bottom, rgba(231, 240, 245, 1) 0%, rgba(170, 221, 235, 1) 100%);
 
