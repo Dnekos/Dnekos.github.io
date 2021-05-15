@@ -13,11 +13,14 @@ html, body {
 .gamepage {
   display: flex;
 }*/
-.wrapper, section{
+section{
 	background: linear-gradient(to bottom, rgba(231, 240, 245, 1) 0%, rgba(170, 221, 235, 1) 100%);
 
 }
 
+.gamepage{
+	background: rgba(170, 221, 235, 1);
+}
 
 .wrapper {
 	align-items: center;
