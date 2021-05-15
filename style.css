@@ -53,7 +53,7 @@ header li {
 }
 
 section {
-    height: minmax(100vh, auto);
+    height: minmax(300vh, auto);
     border: 1px solid black;
     display: flex;
     justify-content: center;
