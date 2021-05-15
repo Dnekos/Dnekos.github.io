@@ -219,7 +219,7 @@ header a {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.projectcover img {
+.projectcover {
   /* scale images properly */
   width: 400px;
   height: 300px;
