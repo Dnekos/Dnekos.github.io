@@ -29,11 +29,11 @@
 				<div class="left">
 					<div class="info">
 						<h1>Funny Worm Game</h1>
-						<p>Funny Worm Game is a 2D physics platformer in which the player controls a worm to maneuver around the level, grabbing, eating, and jumping as they go. It was made for my Game Studio 1 class with a team of seven people over a three week period.</p>
+						<p>Funny Worm Game is a 2D physics platformer in which the player controls a worm to maneuver around the level, grabbing, eating, and jumping as they go. It was made for my Game Studio 1 class with a team of seven people over a three week period. The game is inspired by physics platformers like I am Bread and QWOP and tries to capture the feel of fighting againt the character in a fun, goofy, and enjoyable way. As such, the primary player controller was the game's biggest priority</p>
 					</div>
 					<div class="info">
 						<h2>Features/Things I built:</h2>
-						<ul>
+						<ul class="work-done">
 							<li>Player controller creation</li>
 							<li>Animation rigging<li>
 							<li>Physics and controls</li>
@@ -54,14 +54,29 @@
 					<div class="info">
 						<h2>Player Controller and Movement</h1>
 						<p>The player controller was an interesting and fun challenge as the movement and feel required for a physics worm is a lot different from a normal physics character. I went through many iterations, usually focusing on different ways to connect segmented physics bodies. During the first week of development I created seven different prototypes before selecting the most promising and continuing from there. One version used spring joints between each segment, which didn't work well at all.</p>
+					</div>
+				</div>
+				<div class="right">
+					<img src="img/firstmove_worm.gif">
+				</div>
+			</div>
+			<div class="wrapper">
+				<div class="left">
+					<div class="info">
 						<p>The final version of the worm only has one joint, a distance joint between the head and the tail. The other body segments are held together actually by animation bones, with inverse kinematic joints holding them in place and automaticaly animating the worm to bend and stretch. Thus the player only moves the head directly, with the tail being pulled behind and the spine arranging itself to best fit between the two.</p>
+					</div>
+				</div>
+				<div class="right">
+					<img src="img/finishedmove_worm.gif">
+				</div>
+			</div>
+			<div class="wrapper">
+				<div class="left">
+					<div class="info">
 						<p>Jumping however does have a baked in animation as the worm scrunches up, then when the key is released it ends the animation and applies force to the head, giving lift in the desired direction. Later on a visual cue would help indicate how strong the jump would be when charging, and the worm was allowed to move in the air with a 70% speed penalty, making it still a risk to jump high but giving the player enough control to platform.</p>
 					</div>
 				</div>
 				<div class="right">
-					<img src="img/failedmove_worm.gif">
-					<img src="img/firstmove_worm.gif">
-					<img src="img/finishedmove_worm.gif">
 					<img src="img/finishedjump_worm.gif">
 				</div>
 			</div>
