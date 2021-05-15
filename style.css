@@ -4,7 +4,7 @@ html, body {
   justify-content: center;
   height: 100%;
   margin: 0;
-  margin-top: 50px;
+  margin-top: 25px;
   padding: 0px;
   
   font-family: 'Open Sans', sans-serif;
@@ -218,13 +218,19 @@ header a {
 .cell a:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
-/*.grid > div > img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}*/
-img {
+
+.projectcover img {
+  /* scale images properly */
   width: 400px;
   height: 300px;
   object-fit: contain;
+}
+.info h1{
+	font-size: 3em;
+}
+.info h2{
+	font-size: 2em;
+}
+.info p, .work-done li{
+	font-size: 1.4em;
 }
