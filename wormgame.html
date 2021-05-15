@@ -49,6 +49,22 @@
 					<iframe frameborder="0" src="https://itch.io/embed/924780" width="552" height="167"><a href="https://dnekos.itch.io/funny-worm">Funny Worm Game by Dnekos</a></iframe>
 				</div>
 			</div>
+			<div class="wrapper">
+				<div class="left">
+					<div class="info">
+						<h2>Player Controller and Movement</h1>
+						<p>The player controller was an interesting and fun challenge as the movement and feel required for a physics worm is a lot different from a normal physics character. I went through many iterations, usually focusing on different ways to connect segmented physics bodies. During the first week of development I created seven different prototypes before selecting the most promising and continuing from there. One version used spring joints between each segment, which didn't work well at all.</p>
+						<p>The final version of the worm only has one joint, a distance joint between the head and the tail. The other body segments are held together actually by animation bones, with inverse kinematic joints holding them in place and automaticaly animating the worm to bend and stretch. Thus the player only moves the head directly, with the tail being pulled behind and the spine arranging itself to best fit between the two.</p>
+						<p>Jumping however does have a baked in animation as the worm scrunches up, then when the key is released it ends the animation and applies force to the head, giving lift in the desired direction. Later on a visual cue would help indicate how strong the jump would be when charging, and the worm was allowed to move in the air with a 70% speed penalty, making it still a risk to jump high but giving the player enough control to platform.</p>
+					</div>
+				</div>
+				<div class="right">
+					<img src="img/failedmove_worm.gif">
+					<img src="img/firstmove_worm.gif">
+					<img src="img/finishedmove_worm.gif">
+					<img src="img/finishedjump_worm.gif">
+				</div>
+			</div>
 		</main>
 	</body>
 </html>
