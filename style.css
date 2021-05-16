@@ -37,14 +37,14 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    height: 50px;
+    height: minmax(50px, content-fit);
     line-height: 50px;
     background-color: #eee;
 }
 
 header * {
     display: inline;
-    /*height: 50px;*/
+    font-size: 1em;
 }
 
 header ul {
@@ -214,7 +214,14 @@ header a {
   font-family: Arial;
   font-size: 2.5rem;
   font-weight: bold;
+  line-height: 0px;
+  width: 400px
 }
+
+.cell p {
+	margin: 0px;
+}
+
 .cell a{
   text-decoration: none;
 }
