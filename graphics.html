@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Graphics Work</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body class="gamepage">
+		<header>
+			<nav>
+				<ul class="navbar">
+					<li><a href="index.html">Home</a></li>
+					<div class="dropdown">
+						<button class="dropbtn"><a href="index.html#projects">Stuff I've Made</a>
+							<i class="fa fa-caret-down"></i>
+						</button>
+						<div class="dropdown-content">
+							<a href="hookfoot.html">Captain Hookfoot</a>
+							<a href="visvi.html">Visvi</a>
+							<a href="wormgame.html">Funny Worm Game</a>
+							<a href="shadow.html">Shadow Mesh Generator</a>
+							<a href="graphics.html">Graphics Programming</a>
+						</div>
+					</div> 
+					<li><a href="index.html#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<div class="wrapper">
+				<div class="left">
+					<div class="info">
+						<h2>Raymarched Lightcycle</h1>
+						<p>For my Graphics midterm I learned and utilized the raymarching algorithm to recreate the Lightcycle from the 1982 film TRON. It is built in a fragment shader in ShaderToy. It has two buffers, which handle data from the keyboard and mouse to allow you to move around the environment. The model itself is made of over 40 shapes.</p>
+					</div>
+				</div>
+				<div class="right">
+					<iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/3sVyzc?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="wrapper">
+				<div class="left">
+					<div class="info">
+						<h2>Particle Generator</h1>
+						<p>My Graphics final was a particle system shader built in SHADERed. It uses a compute shader to calculate and store the particle data and apply a vector field to the particles. A geometry shader is then used to convert the particle points in to planes for to be textured by the fragment shader. Simplex noise is also used to randomly create the particles within a circle and to give randomized lifetimes and speeds.</p>
+					</div>
+				</div>
+				<div class="right">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/Vs6OGY0BNcM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
