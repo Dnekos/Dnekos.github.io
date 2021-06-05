@@ -48,7 +48,28 @@
 					</p>
 				</div>
 			</div>
-			
+			<div class="wrapper">
+				<div class="left">
+					<div class="info">
+						<h2>Shadow detection and Marching Squares</h1>
+						<p>The system first starts by sending a ray out from the camera to a point on the surface its facing. Using the normal vector from the point the raycast hits, the function creates a 2D grid of points and checks each of them to see if they are shadowed. It accomplished that using simple raycasts to any nearby light sources. Next, once each of the points have been given values, they are triangulated using the Marching Squares algorithm. In addition to the current square, points are also created and given triangles for the opposite face and any side squares, if on the edge. Once all the points have been triangulated, those points are put together into a mesh to create the shadow, which can then be instantiated</p>
+					</div>
+				</div>
+				<div class="right">
+					
+				</div>
+			</div>
+			<div class="wrapper">
+				<div class="left">
+					<div class="info">
+						<h2>Optimizing and Multithreading</h1>
+						<p>The primary issue with the system as it was first built is how long it takes to create the mesh. It wouldn't be suitable as a game mechanic if there was a full second wait each time. After some testing I determined the two largest time sinks. The first was node creation, as it used both raycasts to each light, as well as an expensive physics function to see if the point is actually on the surface, as well as some inefficient looping creating unneccisary function calls. The second and bigger issue was the actual triangulation, due to how many points that were needed to be calculated. I was able to optimize the looping for the first issue, but couldn't take out the expensive calls. I could, however, reduce lag by implementing multithreading. After playing with rudimentary threads, I settles on using Unity's Job system, which allowed me to move almost all of the triangulation calculations out of the main thread. Doing so increased performance sevenfold, with the game handling much more smoothly.</p>
+					</div>
+				</div>
+				<div class="right">
+					
+				</div>
+			</div>
 		</main>
 	</body>
 </html>
