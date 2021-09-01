@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>EDEN</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body class="gamepage">
+		<header>
+			<nav>
+				<ul class="navbar">
+					<li><a href="index.html">Home</a></li>
+					<div class="dropdown">
+						<button class="dropbtn"><a href="index.html#projects">Stuff I've Made</a>
+							<i class="fa fa-caret-down"></i>
+						</button>
+						<div class="dropdown-content">
+							<a href="hookfoot.html">Captain Hookfoot</a>
+							<a href="visvi.html">Visvi</a>
+							<a href="wormgame.html">Funny Worm Game</a>
+							<a href="bearswithguns.html">Bears with Guns</a>
+							<a href="eden.html">EDEN</a>
+							<a href="thrillertheater.html">Thriller Theater</a>
+							<a href="shadow.html">Shadow Mesh Generator</a>
+							<a href="graphics.html">Graphics Programming</a>
+						</div>
+					</div>
+					<li><a href="index.html#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<div class="wrapper">
+				<div class="left">
+					<div class="info">
+						<h1>EDEN</h1>
+						<p>EDEN is a 3D third person survival game created for my Summer Studio class durring the summer of 2021, in production at the same time as Thriller Theater and Bears With Guns. It was made with a team of three people, including myself as the programmer, a lead designer, and a producer. It was created with the intention of finding what challenges a survival game would hold, as well as the specific needs of one with a non-human player character. It exists now as a vertical slice of a potentially bigger game, focusing on the core resources and systems to complete the game loop, including a day/night cycle, and a full player character life cycle.</p>
+					</div>
+					<div class="info">
+						<h2>Features/Things I built:</h2>
+						<ul class="work-done">
+							<li>System architecture</li>
+							<li>Player interactions and controls</li>
+							<li>Game system implementation</li>
+							<li>Model and animation integration</li>
+							<li>UI and menu implementation</li>
+						</ul>
+					</div>
+				</div>
+				<div class="right">
+					<p class="itch">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/b8ipqLYQoOA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</p>
+				</div>
+			</div>
+			<div class="wrapper">
+				<div class="left">
+					<div class="info">
+						<h2>System Overview</h1>
+						<p>The core game loop of the game is exploring the environment and balancing your various resources. The player can move or sprint, each of which expends stamina, which is regained by staying still. There are four basic needs the player has to keep track of, being Food, Water, Heat, and Shelter. If Food, Water, or Heat get too low, the player's health will drop, but will be regained if the needs are well balanced. As the player expends stamina, they will start becoming tired, which reduces the maximum stamina. By sleeping in the shade, the player can stop being tired. As time goes on, the player character will also grow, increasing their size and health cap.</p>
+					</div>
+					<div class="info">
+						<h2>System Complexity</h1>
+						<p>This project's primary challenge, other than working in 3D, is that all of its systems are interconnected. I had to be concious to avoid excess coupling between different parts of the game, as they each talked to each other. How well each of the four resources were managed impacted the player's health; the player's current age impacts their move speed, health and resource caps, and exhaustion; their exhaustion affects their stamina which restricts their movement and can force them to sleep; etc. If we had more time during the project I would have liked to spend more time balancing these interactions.</p>
+					</div>
+				</div>
+				<div class="right">
+					<img src="img/player_eden2.gif">
+					<p>The different scripts that interact with the player character</p>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

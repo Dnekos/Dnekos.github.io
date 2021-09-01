@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Captain Hookfoot</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body class="gamepage">
+		<header>
+			<nav>
+				<ul class="navbar">
+					<li><a href="index.html">Home</a></li>
+					<div class="dropdown">
+						<button class="dropbtn"><a href="index.html#projects">Stuff I've Made</a>
+							<i class="fa fa-caret-down"></i>
+						</button>
+						<div class="dropdown-content">
+							<a href="hookfoot.html">Captain Hookfoot</a>
+							<a href="visvi.html">Visvi</a>
+							<a href="wormgame.html">Funny Worm Game</a>
+							<a href="bearswithguns.html">Bears with Guns</a>
+							<a href="eden.html">EDEN</a>
+							<a href="thrillertheater.html">Thriller Theater</a>
+							<a href="shadow.html">Shadow Mesh Generator</a>
+							<a href="graphics.html">Graphics Programming</a>
+						</div>
+					</div>
+					<li><a href="index.html#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<div class="wrapper">
+				<div class="left">
+					<div class="info">
+						<h1>Bears with Guns</h1>
+						<p>Bears with Guns is a couch co-op twin stick shooter made for my Summer Studio class in the summer of 2021. It was in development at the same time as EDEN and Thriller Theater, with a team of around eight and made in about a month and a half. The game is about a group of heavily armed bears out to steal honey from bees, painting themselves red as a form of camouflage. Bears with Guns is a vertical slice of an initially larger scope, and showcases fairly smart AI, stealth and combat systems, and multiple playable classes with up to four players.</p> 
+					</div>
+					<div class="info">
+						<h2>Features/Things I built:</h2>
+						<ul class="work-done">
+							<li>Co-op multiplayer functionality</li>
+							<li>Controller and keyboard support</li>
+							<li>Base player interactions</li>
+							<li>AI and pathfinding</li>
+							<li>Tilemapping and art implementation</li>
+							<li>Stealth and Shooting systems</li>
+							<li>UI implementation</li>
+						</ul>
+					</div>
+				</div>
+				<div class="right">
+					<p class="itch">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/3KYPPDnVcz4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</p>
+				</div>
+			</div>
+			<div class="wrapper">
+				<div class="left">
+					<div class="info">
+						<h2>Architecture Overview</h1>
+						<p>Early on in development I created an outline the basic class strucutre that the game, and importantly the interactible objects would take. Firstly there is the Player, which persists through scenes, and holds a log the UID of any Clickable objects's that have been interacted with. It also is the parent of the persistent UI, and thus is the main interface to UI functions, like adding inventory items. Other classes can access those functions through a Player singleton, which also serves as letting us add other player objects to test in different scenes without having them interact with each other.</p>
+					</div>
+				</div>
+				<div class="right">
+					<img src="img/arch_hookfoot.png">
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
