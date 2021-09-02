@@ -50,19 +50,44 @@
 				</div>
 				<div class="right">
 					<p class="itch">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/3KYPPDnVcz4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/ThkhSDEQVhk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</p>
 				</div>
 			</div>
 			<div class="wrapper">
 				<div class="left">
 					<div class="info">
-						<h2>Architecture Overview</h1>
-						<p>Early on in development I created an outline the basic class strucutre that the game, and importantly the interactible objects would take. Firstly there is the Player, which persists through scenes, and holds a log the UID of any Clickable objects's that have been interacted with. It also is the parent of the persistent UI, and thus is the main interface to UI functions, like adding inventory items. Other classes can access those functions through a Player singleton, which also serves as letting us add other player objects to test in different scenes without having them interact with each other.</p>
+						<h2>Co-op an multiplayer support</h1>
+						<p>One of my first goals in this project was to achieve a satisfactory multiplayer experience without hampering gameplay. We wanted to avoid split-screen, so I built a camera system that would track each player and dynamically adjust position and size to focus on all of them. For multiplayer controls, I utilized Unity's Input System, which has various multiplayer capabilities, such as the Player Input component. I handled player joining by making a player select screen, witch processes joining and lets them select their class. When all players are ready, the main game scene is loaded and the PlayerInput.Instantiate function spawns the player characters while keeping multiplayer controls intact.</p>
 					</div>
 				</div>
 				<div class="right">
-					<img src="img/arch_hookfoot.png">
+					<img src="img/select_bwg.gif">
+					<center>Two players selecting their classes</center>
+				</div>
+			</div>
+			<div class="wrapper">
+				<div class="left">
+					<div class="info">
+						<h2>Player Classes</h1>
+						<p>The different player classes were built with a high level of modularity, so that they can be easily customized by designers. Part of this was because we initially wanted players to be able to upgrade the classes using the Honey they collect in levels, but the feature was cut due to time. The player classes offer slightly differing playstyles, reflected in their weapons and stats. The Panda Bear is a heavy, tanky class that weilds a fast firing machine gun, with higher health and slower speed. The Bee Bear moves faster and has a gun with a shotgun-like spread, encouraging riskier playstyle. The Polar Bear is designed for stealthier approaches, with a higher max cloak, and a slow but quiet gun. Finally the Grizzly Bear is a very offensive class, with decent move speed, health, a faster revive time, as well as a rocket launcher that can damage an area.</p>
+					</div>
+				</div>
+				<div class="right">
+					<img src="img/shooting_bwg.gif">
+					<center>Two of the different bears showcasing their different weapon styles</center>
+				</div>
+			</div>
+			<div class="wrapper">
+				<div class="left">
+					<div class="info">
+						<h2>Enemy AI and Pathfinding</h1>
+						<p>For enemy pathfinding I used Aron Granberg's A* pathfinding package. The enemies' 'brain' is composed of a state machine script I built, as well as a few of Granberg's components, which are enabled and disabled depending on the enemy state. There are three primary states an enemy can be in: Patrol, Chase, and Investigate. When it is patrolling, the enemy  moves through a circuit of positions set by the designers. When a player comes within its radius and the enemy passes an awareness check, it switches to Chase, and seeks the closest found player. Investigate is switched to when an enemy is Patrolling and 'hears' (or is close enough to) a player's gunshot, and will look around the area of the noise. There are two kinds of enemies, Drone and Worker Bees. Drones use their body heat as a small AOE attack. Workers, however, have a projectile attack, and will keep their distance when chasing the player.</p>
+					</div>
+				</div>
+				<div class="right">
+					<img src="img/worker_bwg.gif">
+					<center>The first working prototype of the Worker Bee</center>
 				</div>
 			</div>
 		</main>
