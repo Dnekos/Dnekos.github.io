@@ -49,7 +49,7 @@
 				</div>
 				<div class="right">
 					<p class="itch">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/3KYPPDnVcz4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/hYd0AIq2j3o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>					
 					</p>
 				</div>
 			</div>
@@ -57,33 +57,37 @@
 				<div class="left">
 					<div class="info">
 						<h2>Ink advancements and documentation</h1>
-						<p>To start production, I imported my work on the canceled Visual Novel project <i>Prince of Cooking</i>. That work included a revised version of my textbox and node systems from <i>Captain Hookfoot</i>, as well as some basic Ink functionality. I cleaned up that work and improved upon it, with most changes being to the Node system.</p>
+						<p>To start production, I imported my work on the canceled Visual Novel project <i>Prince of Cooking</i>. That work included a revised version of my textbox and node systems from <i>Captain Hookfoot</i>, as well as some basic Ink functionality. I cleaned up that work and improved upon it, with most changes being to the Node system. I made it easier for designers to know what each node plays, by relying less on enums, and more on strings or object references. While that comes at the slight cost of memory allocation, the priority in this project was accessibility and ease of use for writers to implement thier work. I also greatly expanded opun how customizable the nodes are, allowing them to change as they are read, similar to the Interactable Node in <i>Hookfoot</i>.</p>
 					</div>
 				</div>
 				<div class="right">
-					<img src="img/t.png">
+					<img src="img/node_thriller.png">
+					<center>The revised Node system, showing new options on how it reacts when clicked</center>
+
 				</div>
 			</div>
 			<div class="wrapper">
 				<div class="left">
 					<div class="info">
 						<h2>Clue system</h1>
-						<p>talk about the events</p>
+						<p>AS the player listens to dialouge and examines the environment, they can at points collect clues. Clues show up in their own menu, which can be opened and give descriptions of each clue. The clues themselves are activated by variables in Ink; at the start of the game each vaiable in the Ink file is binded to an external function, which is activted when the vriable is set to 'true'. The function then builds out the button in the clue menu and sets up different interactions, including clicking and dragging. Each clue can be dragged around, and clues marked as combinable can be dragged into each other to form a new clue. To handle the combinable tag, as well as the clue description, I made a seperate knot in the story, with stitches for each clue, that I have an alternate Ink stream read through when clicked. Using an alternate stream lets me look up clue information in the middle of a piece of dialog in the same file without interuppting the game's flow.</p>
 					</div>
 				</div>
 				<div class="right">
-					<img src="img/t.png">
+					<img src="img/clue_thriller.gif">
+					<center>First test of collecting and examining a clue</center>
 				</div>
 			</div>
 			<div class="wrapper">
 				<div class="left">
 					<div class="info">
 						<h2>Accusation Phase</h1>
-						<p>talk about the events</p>
+						<p>Once the player collects all of the clues, the game transitions into its accusation phase, or 'Act III' (Act I being the leadup to the murder and II being the clue collecting portion). In this phase, each possible suspect is shown and the player is instructed to select the killer, then choose any evidence that incriminates them. From a design perspective, this is handled entirely within the Ink script, with no work being done in Unity. I wrote code that builds the Scene from the choices presented in the script, with a knot dedicated to the accusation, and creatin gthe lineup out of each written choice. The correct suspect is signified by the choice that leads in to the Verdict stitch, which displays the epilogue. The stitch also contains tags that are used to determine the incriminating evidence. The reason I built it this way is to make it as easy as possible for writers to customize the phase, while doing as little as possible in Unity. It can handle varying amounts of suspects, evidence, or even have multiple killers.</p>
 					</div>
 				</div>
 				<div class="right">
-					<img src="img/t.png">
+					<img src="img/act3_thriller.png">
+					<center>The Ink code format for the Accusation, with comments  it.</center>
 				</div>
 			</div>
 		</main>
