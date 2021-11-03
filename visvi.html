@@ -2,32 +2,35 @@
 <html>
 	<head>
 		<title>Visvi</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="css\styles.css">
 	</head>
 	<body class="gamepage">
 		<header>
 			<nav>
-				<ul class="navbar">
-					<li><a href="index.html">Home</a></li>
-					<div class="dropdown">
-						<button class="dropbtn"><a href="index.html#projects">Stuff I've Made</a>
-							<i class="fa fa-caret-down"></i>
-						</button>
-						<div class="dropdown-content">
-							<a href="hookfoot.html">Captain Hookfoot</a>
-							<a href="visvi.html">Visvi</a>
-							<a href="wormgame.html">Funny Worm Game</a>
-							<a href="bearswithguns.html">Bears with Guns</a>
-							<a href="eden.html">EDEN</a>
-							<a href="thrillertheater.html">Thriller Theater</a>
-							<a href="shadow.html">Shadow Mesh Generator</a>
-							<a href="graphics.html">Graphics Programming</a>
-						</div>
+			<ul class="navigation">
+				<li><a href="#home">Home</a></li>
+				<div class="dropdown">
+					<button class="dropbtn nav-link"><a href="#projects">Stuff I've Made</a>
+						<i class="fa fa-caret-down"></i>
+					</button>
+					<div class="dropdown-content">
+						<a href="hookfoot.html" class="nav-link">Captain Hookfoot</a>
+						<a href="visvi.html" class="nav-link">Visvi</a>
+						<a href="wormgame.html" class="nav-link">Funny Worm Game</a>
+						<a href="bearswithguns.html" class="nav-link">Bears with Guns</a>
+						<a href="eden.html" class="nav-link">EDEN</a>
+						<a href="thrillertheater.html" class="nav-link">Thriller Theater</a>
+						<a href="shadow.html" class="nav-link">Shadow Mesh Generator</a>
+						<a href="graphics.html" class="nav-link">Graphics Programming</a>
 					</div>
-					<li><a href="index.html#contact">Contact</a></li>
-					<li><a href="Demetrius Nekos Resume.pdf">Resume</a></li>
-				</ul>
-			</nav>
+				</div>
+				<li><a href="#contact">Contact</a></li>
+				<li><a href="Demetrius Nekos Resume.pdf">Resume</a></li>
+			</ul>
+			<button class="burger-menu" id="burger-menu">
+				<ion-icon class="bars" name="menu-outline"></ion-icon>
+			</button>
+		</nav>
 		</header>
 		<main>
 			<div class="wrapper">

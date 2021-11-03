@@ -1,91 +1,299 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Demetrius Nekos' Site</title>
-		<link rel="stylesheet" href="style.css">
+<!-- https://www.freecodecamp.org/news/how-to-build-a-developer-portfolio-website/ is used as a base -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--CSS Styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Favicons -->
+    <!--<link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32x32.png"
+    />->>
+
+    <!-- Animate CSS CDN -->
+    <link
+      rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+	/>
+	<title>Demetrius Nekos</title>
 	</head>
 	<body>
-		<header>
-			<nav>
-				<ul class="navbar">
-					<li><a href="#home">Home</a></li>
-					<div class="dropdown">
-						<button class="dropbtn"><a href="#projects">Stuff I've Made</a>
-							<i class="fa fa-caret-down"></i>
-						</button>
-						<div class="dropdown-content">
-							<a href="hookfoot.html">Captain Hookfoot</a>
-							<a href="visvi.html">Visvi</a>
-							<a href="wormgame.html">Funny Worm Game</a>
-							<a href="bearswithguns.html">Bears with Guns</a>
-							<a href="eden.html">EDEN</a>
-							<a href="thrillertheater.html">Thriller Theater</a>
-							<a href="shadow.html">Shadow Mesh Generator</a>
-							<a href="graphics.html">Graphics Programming</a>
-						</div>
+    <!-- Navbar -->
+		<nav>
+			<ul class="navigation">
+				<li><a href="#home">Home</a></li>
+				<div class="dropdown">
+					<button class="dropbtn nav-link"><a href="#projects">Stuff I've Made</a>
+						<i class="fa fa-caret-down"></i>
+					</button>
+					<div class="dropdown-content">
+						<a href="hookfoot.html" class="nav-link">Captain Hookfoot</a>
+						<a href="visvi.html" class="nav-link">Visvi</a>
+						<a href="wormgame.html" class="nav-link">Funny Worm Game</a>
+						<a href="bearswithguns.html" class="nav-link">Bears with Guns</a>
+						<a href="eden.html" class="nav-link">EDEN</a>
+						<a href="thrillertheater.html" class="nav-link">Thriller Theater</a>
+						<a href="shadow.html" class="nav-link">Shadow Mesh Generator</a>
+						<a href="graphics.html" class="nav-link">Graphics Programming</a>
 					</div>
-					<li><a href="#contact">Contact</a></li>
-					<li><a href="Demetrius Nekos Resume.pdf">Resume</a></li>
-				</ul>
-			</nav>
-		</header>
-		<main>
-			<section id="home">
-                    <h1>Demetrius Nekos makes Games.</h1>
-            </section>
-			<section id="projects">
-                <div class="section-inner">
-                    <h2>Stuff I've made</h2>
-                    <p>I go to school for Game Programming, and have done stuff. I also made this site by teaching myself html and css, which is why it looks a bit bad.</p>
-                    <div class="container">
-						<div class="grid">
-							<div class="cell">
-								<a href="hookfoot.html"><img src="img/hookfoot_port.png">
-								<p>Captain Hookfoot</p></a>
-							</div>
-							<div class="cell">
-								<a href="eden.html"><img src="img/eden_port.png">
-								<p>EDEN</p></a>
-							</div>
-							<div class="cell">
-								<a href="bearswithguns.html"><img src="img/bwg_port.png">
-								<p>Bears with Guns</p></a>
-							</div>
-							<div class="cell">
-								<a href="visvi.html"><img src="img/visvi_port.png">
-								<p>Visvi</p></a>
-							</div>
-							<div class="cell">
-								<a href="wormgame.html"><img src="img/worm_port.png">
-								<p>Funny Worm Game</p></a>
-							</div>
-							<div class="cell">
-								<a href="thrillertheater.html"><img src="img/thriller_port.png">
-								<p>Thriller Theater</p></a>
-							</div><div class="cell">
-								<a href="shadow.html"><img src="img/shadow_port.PNG">
-								<p>Shadow Mesh Generator</p></a>
-							</div>
-							<div class="cell">
-								<a href="graphics.html"><img src="img/graphics_midterm.gif">
-								<p>Graphics Programming</p></a>
-							</div>
-						</div>
-					</div>
-                </div>
-            </section>
-			<section id="contact">
-                <div class="section-inner">
-                    <h2>Contact me</h2>
-                    <p>You can find me at:</p>
-                    <ul class="social-links">
-                        <li><a href="https://github.com/Dnekos">Github</a></li>
-                        <li><a href="https://dnekos.itch.io/">Itch.io</a></li>
-						<li><a href="https://www.linkedin.com/in/demetrius-nekos/">LinkedIn</a></li>
-                    </ul>
-                    <p>Or, you can <a href="mailto:demetrius.nekos@mymail.champlain.edu">send me an email</a>.</p>
-                </div>
-            </section>
-		</main>
-	</body>
+				</div>
+				<li><a href="#contact">Contact</a></li>
+				<li><a href="Demetrius Nekos Resume.pdf">Resume</a></li>
+			</ul>
+			<button class="burger-menu" id="burger-menu">
+				<ion-icon class="bars" name="menu-outline"></ion-icon>
+			</button>
+		</nav>
+		
+    <!-- Hero Section -->
+	<section class="hero" id="about">
+		  <img
+			src="assets/images/wfh_1.svg"
+			alt="jane-doe"
+			loading="lazy"
+			class="hero-img"
+		  />
+		<div class="bio">
+			<h2 class="bio-title">About Me</h2>
+			<p class="bio-text">
+				Hello! I am a Game Programmer studying at Champlain College! I enjoy building game systems and tools as well as narrative integration in games.</p>
+		</div>
+	</section>
+	
+    <!-- More about -->
+    <section class="more-about">
+      <h2>More About Me</h2>
+      <p>
+		I started my interest in game development almost immediatly after I started to learn how to code. I grew up on games and want to pursue the development of my programming skills in an artistically and creatively fulfilling way.
+      </p>
+      <p>
+		Outside of game development, I try to keep myself busy. I am an Eagle Scout, have a black belt in karate, and am an amateur fencer.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
+        consequuntur labore? Ea totam voluptas amet!
+      </p>
+    </section>
+	
+    <!-- Skills section -->
+	<section class="skills" id="skills">
+      <h2 class="skill-header">My Top Skills</h2>
+
+      <div class="skills-wrapper">
+        <div class="first-set animate__animated animate__pulse">
+          <img
+            src="https://img.icons8.com/color/480/000000/c-sharp-logo.png"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+          <img
+            src="https://img.icons8.com/color/480/000000/javascript--v1.png"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+          <img
+            src="https://img.icons8.com/color/480/000000/c-plus-plus-logo.png"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+        </div>
+
+        <div class="second-set animate__animated animate__pulse">
+          <img
+            src="https://img.icons8.com/ios-filled/500/000000/unity.png"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+          <img
+            src="https://img.icons8.com/ios-filled/250/000000/unreal-engine.png"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+          <img
+            src="https://img.icons8.com/color/480/000000/game-maker.png"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+        </div>
+      </div>
+    </section>
+	
+    <!-- Projects section -->
+	<section class="projects" id="projects">
+		<h2 class="projects-title">Some of my Recent Projects</h2>
+		<div class="projects-container">
+			<div class="project-container project-card">
+				<a href="hookfoot.html" class="project-link">
+				<img
+					src="img/hookfoot_port.png"
+					alt="captain-hookfoot"
+					loading="lazy"
+					class="project-pic"
+				  />
+				  <h3 class="project-title">Captain Hookfoot</h3>
+				  <p class="project-details">
+					A point and click puzzle game with heavy narrative elements built in Unity, utilizing SQL databasing to manage visual novel style dialogue.
+				  </p>
+				  </a>
+			</div>
+			<div class="project-container project-card">
+				<a href="eden.html" class="project-link">
+				<img
+					src="img/eden_port.png"
+					alt="eden"
+					loading="lazy"
+					class="project-pic"
+				  />
+				  <h3 class="project-title">EDEN</h3>
+				  <p class="project-details">
+					A 3D survival game built in Unity with various interconnected systems including creature growth, a day/night cycle, stamina, exhaustion, and a sleep system.
+				  </p>
+				  </a>
+			</div>
+			<div class="project-container project-card">
+				<a href="bearswithguns.html" class="project-link">
+				<img
+					src="img/bwg_port.png"
+					alt="bears-with-guns"
+					loading="lazy"
+					class="project-pic"
+				  />
+				  <h3 class="project-title">Bears With Guns</h3>
+				  <p class="project-details">
+					A local co-op twin stick shooter built in Unity, with multiple playable classes and full enemy AI pathfinding.
+				  </p>
+				  </a>
+			</div>
+			<div class="project-container project-card">
+				<a href="visvi.html" class="project-link">
+				<img
+					src="img/visvi_port.png"
+					alt="visvi"
+					loading="lazy"
+					class="project-pic"
+				  />
+				  <h3 class="project-title">Visvi</h3>
+				  <p class="project-details">
+					A short educational game in Unity utilizing SQL databasing to implement narrative systems.
+				  </p>
+				  </a>
+			</div>
+		</div>
+		<div class="projects-container">
+			<div class="project-container project-card">
+				<a href="wormgame.html" class="project-link">
+				<img
+					src="img/worm_port.png"
+					alt="worm-game"
+					loading="lazy"
+					class="project-pic"
+				  />
+				  <h3 class="project-title">Funny Worm Game</h3>
+				  <p class="project-details">
+					A 2D physics platformer in Unity with a complex ragdolled character controller.
+				  </p>
+				  </a>
+			</div>
+			<div class="project-container project-card">
+				<a href="thrillertheater.html" class="project-link">
+				<img
+					src="img/thriller_port.png"
+					alt="captain-hookfoot"
+					loading="lazy"
+					class="project-pic"
+				  />
+				  <h3 class="project-title">Thriller Theater</h3>
+				  <p class="project-details">
+					A technical prototype of a modular point and click murder mystery game in Unity, with full Ink integration.
+				  </p>
+				  </a>
+			</div>
+			<div class="project-container project-card">
+				<a href="shadow.html" class="project-link">
+				<img
+					src="img/shadow_port.PNG"
+					alt="shadow-tests"
+					loading="lazy"
+					class="project-pic"
+				  />
+				  <h3 class="project-title">Shadow Mesh Generator</h3>
+				  <p class="project-details">
+					A technical test in Unity to try out its mesh generation and threading systems.
+				  </p>
+				  </a>
+			</div>
+			<div class="project-container project-card">
+				<a href="graphics.html" class="project-link">
+				<img
+					src="img/graphics_midterm.gif"
+					alt="lightcycle"
+					loading="lazy"
+					class="project-pic"
+				  />
+				  <h3 class="project-title">Graphics Programming</h3>
+				  <p class="project-details">
+					Some highlights of my graphics programming projects. Including complex raymarching, and building a particle system.
+				  </p>
+				  </a>
+			</div>
+			
+		 </div>
+    </section>
+    <!-- Contact section -->
+
+    <!-- Social accounts - Fixed to the right -->
+
+    <!-- Scroll to top -->
+	  <i class="scroll-up" id="scroll-up"
+      ><img
+        src="https://img.icons8.com/color/480/000000/circled-up--v3.png"
+        class="socicon up-arrow"
+        alt="scroll-up"
+    /></i>
+	
+    <!-- Footer section -->
+	<footer>
+		<p class="copy">&copy; Copyright 2021</p>
+         <p>You can find me at:</p>
+         <ul class="social-links">
+             <li><a href="https://github.com/Dnekos">Github</a></li>
+             <li><a href="https://dnekos.itch.io/">Itch.io</a></li>
+			<li><a href="https://www.linkedin.com/in/demetrius-nekos/">LinkedIn</a></li>
+         </ul>
+         <p>Or, you can <a href="mailto:demetrius.nekos@mymail.champlain.edu">send me an email</a>.</p>
+		</p>
+	</footer>
+
+    <!-- Website scripts -->
+    <script src="js/app.js"></script>
+
+    <!-- Ion icons scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
