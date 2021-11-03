@@ -383,7 +383,7 @@ footer {
     gap: 0;
   }
 
-  .hero img, .wrapper img {
+  .hero img {
         height: 37.5rem;
         width: 30rem;
     }
@@ -422,7 +422,7 @@ footer {
   
   .wrapper {
 		flex-direction: column;
-		width: 20.875rem
+		max-width: 100%;
 	}
 }
 
@@ -431,10 +431,6 @@ footer {
     height: 37.5rem;
     width: 23rem;
   }
-	.wrapper img {
-		height: 37.5rem;
-    width: 23rem;
-	}
   .bio {
     width: 18.3rem;
   }
@@ -442,7 +438,7 @@ footer {
   .more-about {
 	max-width: 100%;
   }
-  
+
   .project-container {
     width: 17.875rem;
   }
