@@ -39,7 +39,8 @@
 				<div class="left">
 					<div class="info">
 						<h1>Wilderness Supervision</h1>
-						<p>Wilderness Supervision is a management simulation game about organizing rowdy campers. It was made in 72 hours solo for Mini Jam 93. In the game, you take control as the sole chaperone of a camping trip and have to command the many campers to complete tasks. However, the campers will quickly get distracted and go on to pursue other activities, such as talking to their friends. This was a fun and challenging project as being a solo developer meant that I had to focus much of my time on aspects like sound and art, things I was unaccustomed to needing to implement. I used various available resources and free art/sounds to supplement my lack of experience with art. During last game I did solo, I neglected those aspects which led to a worse off game, however I am more confident in Wilderness' aesthetics.</p>
+						<p>Wilderness Supervision is a management simulation game about organizing rowdy campers. It was made in 72 hours solo for Mini Jam 93. In the game, you take control as the sole chaperone of a camping trip and have to command the many campers to complete tasks. However, the campers will quickly get distracted and go on to pursue other activities, such as talking to their friends.</p>
+						<p>This was a fun and challenging project as being a solo developer meant that I had to focus much of my time on aspects like sound and art, things I was unaccustomed to needing to implement. I used various available resources and free art/sounds to supplement my lack of experience with art. During last game I did solo, I neglected those aspects which led to a worse off game, however I am more confident in Wilderness' aesthetics.</p>
 					</div>
 					<div class="info">
 						<h2>Features/Things I built:</h2>
@@ -74,19 +75,14 @@
 					<div class="info">
 						<h2>AI Behavior</h1>
 						<p>For pathfinding, I used Aron Granberg's excellent A* package. Each camper has three basic things they can do, work on a task, wander idly, and socialize. I set up the campers to run a weighted RNG check everytime they completed their current activity, creating the loop of: Pick an activity to do, pathfind to determined activity position, handle activity, pick an activity to do. The agency the player has is the ability to override their activity check and assign them to work on a task. The check is weighted however, so that the more the camper does a task the more likely they are to land on a different activity on their check and stop working. The intended playstyle is for the player to learn to not overwork the campers and give them downtime.</p>
+						<h2>Social Coordinator</h1>
+						<p>The campers' socializing activity was the hardest to develop. I wanted socializing campers to gather together and 'talk', which became difficult as each camper ran indepent of each other. I solved this by creating a 'Social Coordinator' to act as a middleman. I used WinSock's Select function as inspiraton to handle this behavior. When a camper wanted to socialize, they'd join a queue on the Coordinator, which would wait until it either timed out or detected enough campers, then assigned them to socialize, by giving them a point on the perimeter of a circle at the midpoint of all queued campers. As an added bonus, the Coordinator gave a shared space to hold shared data between the campers, such as a list of possible names and the flavortext for each of the three activities.</p>
+
 					</div>
 				</div>
 				<div class="right">
 					<img src="img/ws_social.gif">
 					<center>Two campers stand near close as one of their info panels show they talk to each other.</center>
-				</div>
-			</div>
-			<div class="wrapper">
-				<div class="left">
-					<div class="info">
-						<h2>Social Coordinator</h1>
-						<p>The campers' socializing activity was the hardest to develop. I wanted socializing campers to gather together and 'talk', which became difficult as each camper ran indepent of each other. I solved this by creating a 'Social Coordinator' to act as a middleman. I used WinSock's Select function as inspiraton to handle this behavior. When a camper wanted to socialize, they'd join a queue on the Coordinator, which would wait until it either timed out or detected enough campers, then assigned them to socialize, by giving them a point on the perimeter of a circle at the midpoint of all queued campers. As an added bonus, the Coordinator gave a shared space to hold shared data between the campers, such as a list of possible names and the flavortext for each of the three activities.</p>
-					</div>
 				</div>
 			</div>
 			<div class="wrapper">
