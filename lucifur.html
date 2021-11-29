@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Captain Hookfoot</title>
+		<title>Lucifur</title>
 		<link rel="stylesheet" type="text/css" href="css\styles.css">
 	</head>
 	<body class="gamepage">
@@ -24,6 +24,7 @@
 						<a href="graphics.html" class="nav-link">Graphics Programming</a>
 						<a href="wilderness.html" class="nav-link">Wilderness Supervision</a>
 						<a href="bestbefore.html" class="nav-link">Best Before 90 Seconds</a>
+						<a href="lucifur.html" class="nav-link">Lucifur</a>
 					</div>
 				</div>
 				<!--<li><a href="index#contact">Contact</a></li>-->
@@ -38,88 +39,34 @@
 			<div class="wrapper">
 				<div class="left">
 					<div class="info">
-						<h1>Captain Hookfoot</h1>
-						<p>Captain Hookfoot is a point and click adventure game created for my Game Studio 1 class in the spring of 2021. It was made in six weeks with a team of seven people. It is inspired by games such as Pajama Sam and the Monkey Island series, as well as films like the Goonies. It is a verticle slice of a potentially bigger game, with each puzle showing a different potential mechanic, such as interactable screens, dialogue, and item combining. It is a very narrative heavy game, with a colorful cast of characters to meet and interact with.</p>
+						<h1>Lucifur: The Witch's Familiar</h1>
+						<p>Lucifur is a top down twin stick action game about a witch's familiar cleaning up her lair by extinguishing candles. As candles are extinguished, ghosts come out and take over the once lit areas. Lucifur must extinguish the candles, avoid the ghosts, and make it out! This game was made as part of Abertay University's Game Developer Socieity's 2021 Halloween Game Jame, with a team of six people over the course of a weekend. You can play it online on itch.io</p>
 					</div>
 					<div class="info">
 						<h2>Features/Things I built:</h2>
 						<ul class="work-done">
-							<li>System architecture</li>
-							<li>Object interactions and controls</li>
-							<li>Database integration with <a href="https://sqlitebrowser.org/">Sqlite Browser</a></li>
-							<li>Designer friendly implementation tools</li>
-							<li>Narrative systems and textboxes</li>
-							<li>UI implementation</li>
+							<li>Taught and assisted newer teammates on Unity</li>
+							<li>Player interactions</li>
+							<li>Enemy AI state machines and pathfinding</li>
+
 						</ul>
 					</div>
 				</div>
 				<div class="right">
 					<p class="itch">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/3KYPPDnVcz4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</p>
-					<iframe frameborder="0" src="https://itch.io/embed/1028806" width="552" height="167"><a href="https://scyfer1.itch.io/captain-hookfoot">Captain Hookfoot by scyfer1, Dnekos, Pogo</a></iframe>
+						<iframe frameborder="0" src="https://itch.io/embed/1258328" width="552" height="167"><a href="https://dnekos.itch.io/lucifur">Lucifur: The Witch's Assistant by Demetri, JannMjoen, AwkwardFoxWaifu, TorinPellegrini, samcollier, Juturna2jz</a></iframe>
 				</div>
 			</div>
 			<div class="wrapper">
 				<div class="left">
 					<div class="info">
-						<h2>Architecture Overview</h1>
-						<p>Early on in development I created an outline the basic class strucutre that the game, and importantly the interactible objects would take. Firstly there is the Player, which persists through scenes, and holds a log the UID of any Clickable objects's that have been interacted with. It also is the parent of the persistent UI, and thus is the main interface to UI functions, like adding inventory items. Other classes can access those functions through a Player singleton, which also serves as letting us add other player objects to test in different scenes without having them interact with each other.</p>
+						<h2>Under Construction</h1>
+						<p></p>
 					</div>
 				</div>
-				<div class="right">
-					<img src="img/arch_hookfoot.png">
-					<center>A piece of documentation i made early on, showing how classes would be divided.</center>
-				</div>
 			</div>
-			<div class="wrapper">
-				<div class="left">
-					<div class="info">
-						<h2>Clickable Nodes and Databaser</h1>
-						<p>The base class for each of the objects the player interacts with is the Clickable node. It inherits functions from the IPointer handlers to allow for clicking, as well as our Databaser. The Databaser class was made to hold all of the code involved with interacting with .db files, which are used to store all of the dialogue (123 dialogue lines and 61 interaction based lines). The Clickable node also has virtual functions for both right and left clicking, called LookAt and Interact, with children of Clickable overwrite.</p>
-					</div>
-				</div>
-				<div class="right">
-					<img src="img/db_hookfoot.PNG">
-					<center>Two dialogue sequences, as seen in the database file.</center>
-				</div>
-			</div>
-			<div class="wrapper">
-				<div class="left">
-					<div class="info">
-						<h2>Interactable Nodes and the EventManager</h1>
-						<p>Interactable Nodes were hard to develop. The goal of them is to have a number of different possible states, and be able to have different goals to advance said states, at which point the state change affects the environment. To ease the puzzle implementation process, I utilized Unity's PropertyDrawer function to create a custom Inspector interface and allow for easy setting of states and state changes. The state changes were handled by invoking a Unity Event, like a button would. To simplify Interactable's code, the functions invoked lived in various StateObserver classes in the EventManager.</p>
-					</div>
-				</div>
-				<div class="right">
-					<img src="img/interactable_hookfoot.png">
-					<center>The Interactable Node component as seen on the Inspector.</center>
-				</div>
-			</div>
-			<div class="wrapper">
-				<div class="left">
-					<div class="info">
-						<h2>Pickup and InventorySlot Nodes</h1>
-						<p>Pickup nodes were pretty easy to develop, as most of the inventory adding is handled within the Player and the UI scripts. Pickup Nodes primarily facilitate the beginning of the process. When an item is picked up, an InventorySlot is created, which handles setting and using items. Their Interact functions has two parts, setting the active item if none is active, and combining items if one is already active. In the game, this is seen in the bucket mixing puzzle, as the player pours multiple liquids into a bucket to create something acidic enough to melt a cage.</p>
-					</div>
-				</div>
-				<div class="right">
-					<img src="img/item_hookfoot.gif">
-					<center>A puzzle that requires you to combine clues.</center>
-				</div>
-			</div>
-			<div class="wrapper">
-				<div class="left">
-					<div class="info">
-						<h2>Location and Display Nodes</h1>
-						<p>These are fairly self explanatory and simple, but significantly different enough in function to warrant their own subclasses. Location nodes simply call transitional functions to move over to the inputted scene. Display Nodes are similar, but connect the player to a different part of the same scene, by changing the active camera. These are used less for scene transitions and more for giving the player more ways to interact or examine objects. In our verticle slice, we use it to examine the combination lock on a desk, allowing the player to zoom in and interact with the lock mechanisms.</p>
-					</div>
-				</div>
-				<div class="right">
-					<img src="img/display_hookfoot.gif">
-					<center>A puzzle utilizing the Display Node to show a combination lock.</center>
-				</div>
-			</div>
+			
 		</main>
 		
 		<!-- Scroll to top -->
